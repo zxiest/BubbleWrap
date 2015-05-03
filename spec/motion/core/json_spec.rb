@@ -62,7 +62,7 @@ EOS
 
     it "should parse String generated from NSData" do
       #A contrived example to produce NSString(s) created from NSData instances
-      text = NSString.alloc.initWithData(@json_string.to_data, encoding:NSUTF8StringEncoding)
+      text = String.alloc.initWithData(@json_string.to_data, encoding:NSUTF8StringEncoding)
       parsed = BW::JSON.parse(text)
       parsed['login'].should == 'mattetti'
     end
