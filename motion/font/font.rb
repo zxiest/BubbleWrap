@@ -26,7 +26,7 @@ module BubbleWrap
       end
       _font = nil
 
-      if params.is_a?(NSString)
+      if params.is_a?(String)
         params = {name: params}
       end
 
